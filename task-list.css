@@ -24,7 +24,7 @@ body{
   border-radius: 1rem;
 }
 
-.row,.description{ /* 入力エリア 3セクション と 説明文*/
+.row,.description{ /* 入力エリアの3セクション と 説明文*/
   font-size: 1.2rem;
   padding: 1rem;
   padding-bottom: 0.6rem;
@@ -32,9 +32,9 @@ body{
 
 .register-button,.delete-button{ /* 登録ボタン,削除ボタン*/
   color: rgba(255, 255, 255, 0.979);
-  background-color: #e9784b;
   border: none;
   border-radius: 0.6rem;
+  font-size: 1.2rem;
 }
 
 .register-button:hover,.delete-button:hover{/* 登録ボタン,削除ボタンのホバー時*/
@@ -43,7 +43,7 @@ body{
 }
 
 .register-button{
-  font-size: 1.2rem;
+  background-color: #eb7f55;
   padding: 0.4rem 1rem;
   margin-left: 1.8rem;
 }
@@ -57,6 +57,27 @@ body{
   font-size: 1.2rem;
   padding: 0.4rem 2rem;
   cursor: pointer;
+}
+
+.task-list-header{/* 表の項目題　css*/
+  font-size: 1.2rem;
+
+  background-color: #eb7f55;
+  color: #f3f3f3;
+}
+
+table{/*親要素いっぱいに表を広げためのCSS*/
+  width: 100%;
+}
+
+td,th{ /*表のセルpadding*/
+  padding: 1rem;
+  text-align: center; /*削除ボタンのためにtext-align設定した　なくてもいい*/
+}
+
+.delete-button{
+  padding: 1rem;
+  background-color: #d72c12;
 }
 
 .made-block{/*ブロック要素にする*/

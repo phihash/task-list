@@ -18,6 +18,7 @@
       <input type="month" id="taskmonth" class="taskmonth made-block">
       <select id="taskstatus" class="taskstatus made-block">
         <option value="isdone">済</option>
+        <option value="isnotdone">未完了</option>
       </select>
       <button id="submit" class="register-button made-block">登録</button>
     </div>
@@ -30,7 +31,7 @@
   </div>
   <div class="tasklistarea">
     <table>
-      <thead>
+      <thead class="task-list-header">
         <tr>
           <th>実施月</th>
           <th>進捗</th>
@@ -39,12 +40,16 @@
           <th>削除</th>
         </tr>
       </thead>
-      <tbody>
-        <td>2021-07</td>
-        <td>済</td>
-        <td>A課題</td>
-        <td>やるきない<br></td>
-        <td><button class="delete-button">削除</button></td>
+      <tbody class="task-list-body">
+        <tr>
+          <td>2021-07</td>
+          <td>済</td>
+          <td>A課題</td>
+          <td>経営統合に伴う業務プロセス統合プロジェクト。<br>
+            プロジェクトリーダー（メンバー４人）として担当。<br>
+            ＱＤＣ目標いずれも達成。ＣＳ評価で５をいただいた。<br></td>
+          <td><button class="delete-button">削除</button></td>
+        </tr>
       </tbody>
     </table>
   </div>
