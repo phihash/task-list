@@ -41,5 +41,10 @@ function deleteTask(deletedIndex){
  * タスクリストを表示する
  */
 function displayTaskList(){
+  tasktListTbody.innerText = '';
+  for(let i = 0; i < tasks.length ;i++){
+    const task = tasks[i];
 
+
+  }
 }
