@@ -1,0 +1,69 @@
+@charset "UTF-8";
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #fff;
+}
+
+.site-title{ /* サイトタイトル*/
+  text-align: center;
+  padding: 1.8rem;
+  margin-bottom: 1.8rem;
+}
+
+.inputarea,.tasklistarea{/* 入力エリア と タスクリストエリアの例レイアウトを調整*/
+  max-width: 1080px;
+  margin: 2rem auto;
+  background-color: #f3f3f3;
+  padding: 2.4rem;
+  border-radius: 1rem;
+}
+
+.row,.description{ /* 入力エリア 3セクション と 説明文*/
+  font-size: 1.2rem;
+  padding: 1rem;
+  padding-bottom: 0.6rem;
+}
+
+.register-button,.delete-button{ /* 登録ボタン,削除ボタン*/
+  color: rgba(255, 255, 255, 0.979);
+  background-color: #e9784b;
+  border: none;
+  border-radius: 0.6rem;
+}
+
+.register-button:hover,.delete-button:hover{/* 登録ボタン,削除ボタンのホバー時*/
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.register-button{
+  font-size: 1.2rem;
+  padding: 0.4rem 1rem;
+  margin-left: 1.8rem;
+}
+
+.tasktitle,.taskdetail{/* タスク入力エリアのタスク名とタスク詳細*/
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+.taskmonth,.taskstatus{/*タスク施行月とタスク状態 */
+  font-size: 1.2rem;
+  padding: 0.4rem 2rem;
+  cursor: pointer;
+}
+
+.made-block{/*ブロック要素にする*/
+  display: block;
+}
+
+.d-flex{/* flexボックスにする */
+  display: flex;
+  justify-content: flex-start;
+}

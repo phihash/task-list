@@ -6,26 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>私のやったことリスト</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="task-list.css">
 </head>
 <body>
  <h1 class="site-title">やったことリスト</h1>
  <div class="inputarea">
-    <div class="row">
-      <p>実施月、進捗、タイトル、タスク概要を入力してください</p>
-      <input type="month" id="taskmonth">
-      <select name="" id="taskstatus">
+  <p class="description">実施月、進捗、タイトル、タスク概要を入力してください</p>
+    <div class="row d-flex">
+      <input type="month" id="taskmonth" class="taskmonth made-block">
+      <select id="taskstatus" class="taskstatus made-block">
         <option value="isdone">済</option>
       </select>
-      <button id="submit">登録する</button>
+      <button id="submit" class="register-button made-block">登録</button>
     </div>
     <div class="row">
-    <input type="text" id="tasktitle" placeholder="タスクのタイトルを入力">
+      <input type="text"  class="tasktitle made-block" id="tasktitle" placeholder="タスクのタイトル">
     </div>
     <div class="row">
-    <textarea id="taskdetail" rows="5" placeholder="タスクの内容"></textarea>
+    <textarea id="taskdetail" class="taskdetail made-block" rows="5" placeholder="タスクの内容"></textarea>
     </div>
   </div>
   <div class="tasklistarea">
@@ -44,7 +44,7 @@
         <td>済</td>
         <td>A課題</td>
         <td>やるきない<br></td>
-        <td><button>削除する</button></td>
+        <td><button class="delete-button">削除</button></td>
       </tbody>
     </table>
   </div>
