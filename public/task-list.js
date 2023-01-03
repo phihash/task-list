@@ -7,13 +7,14 @@ const taskDetail = document.getElementById('taskdetail');
 const submitButton = document.getElementById('submit');
 const tasktListTbody = document.getElementById('tasklist');
 // タスクを管理する配列を準備する
-const tasks = [];
-
+let tasks = [];
 /**
  * タスクリストを表示する
  */
  function displayTaskList(){
   tasktListTbody.innerText = '';
+  tasks = JSON.parse(localStorage.getItem("task-list-app"));
+  console.log(tasks);
   for(let i = 0; i < tasks.length ;i++){
     const task = tasks[i];
     const taskTr = document.createElement('tr');
@@ -48,6 +49,7 @@ const tasks = [];
  */
 function addTask(task){
     tasks.push(task);
+    localStorage.setItem('task-list-app',JSON.stringify(tasks));
     displayTaskList();
 }
 
@@ -57,6 +59,7 @@ function addTask(task){
  */
 function deleteTask(deleteIndex){
   tasks.splice(deleteIndex,1);
+  localStorage.setItem('task-list-app',JSON.stringify(tasks));
   displayTaskList();
 }
 
@@ -73,21 +76,28 @@ submitButton.onclick = function(){
     detail: taskDetail.value
   }
   addTask(task);
-
+  taskMonth.value = "";
+  taskTitle.value = "";
+  taskDetail.value = "";
 }
 
+displayTaskList();
 
+// function addSmaple() {
+//   // 関数の処理
+//   const task = {
+//     month: '2021-07',
+//     status: '済',
+//     title: 'A社経営統合プロジェクト',
+//     detail: '経営統合に伴う業務プロセス統合プロジェクト。\nプロジェクトリーダー（メンバー４人）として担当。\nＱＤＣ目標いずれも達成。ＣＳ評価で５をいただいた。'
+//   }
 
-function addSmaple() {
-  // 関数の処理
-  const task = {
-    month: '2021-07',
-    status: '済',
-    title: 'A社経営統合プロジェクト',
-    detail: '経営統合に伴う業務プロセス統合プロジェクト。\nプロジェクトリーダー（メンバー４人）として担当。\nＱＤＣ目標いずれも達成。ＣＳ評価で５をいただいた。'
-  }
+//   if(JSON.parse(localStorage.getItem("task-list-app"))){
+//     console.log("localstorageにデータがあるので実行しませんでした");
+//     displayTaskList();
+//     return;
+//   }
+//   addTask(task);
+// }
 
-  addTask(task);
-}
-
-addSmaple();
+// addSmaple();
