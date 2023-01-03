@@ -13,7 +13,7 @@ let tasks = [];
  */
  function displayTaskList(){
   tasktListTbody.innerText = '';
-  tasks = JSON.parse(localStorage.getItem("task-list-app"));
+  tasks = JSON.parse(localStorage.getItem("task-list-app")) ?? [];
   console.log(tasks);
   for(let i = 0; i < tasks.length ;i++){
     const task = tasks[i];
@@ -48,6 +48,7 @@ let tasks = [];
  * @param {Object} task タスク
  */
 function addTask(task){
+    console.log(tasks);
     tasks.push(task);
     localStorage.setItem('task-list-app',JSON.stringify(tasks));
     displayTaskList();
@@ -65,7 +66,7 @@ function deleteTask(deleteIndex){
 
 // 登録ボタンの click イベントを設定する
 submitButton.onclick = function(){
-  if(!taskMonth.value  && !taskTitle.value && !taskDetail.value){
+  if(!taskMonth.value  || !taskTitle.value || !taskDetail.value){
     alert("入力されていない項目があります")
     return;
   }
